@@ -1,0 +1,40 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <include layout="@layout/navigation"
+        android:id="@+id/navigation"/>
+    <ImageView
+        android:id="@+id/imageview"
+        android:layout_width="200dp"
+        android:layout_height="150dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/image"
+        android:layout_below="@+id/navigation"
+        android:layout_toEndOf="@+id/view" />
+
+    <TextView
+        android:id="@+id/textview"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="0度"
+        android:layout_below="@+id/imageview"
+        android:layout_alignStart="@+id/imageview"
+        android:layout_marginTop="140dp" />
+
+    <SeekBar
+        android:id="@+id/seekbar"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:max="360"
+        android:layout_below="@+id/textview"
+        android:layout_alignStart="@+id/imageview" />
+
+    <com.xin.android.cameratest.View.CircularImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/view"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>

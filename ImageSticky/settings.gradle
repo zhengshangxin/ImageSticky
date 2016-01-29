@@ -1,1 +1,1 @@
-include ':project', ':imagestickylib', ':imageembelish'
+include ':project', ':imagestickylib', ':imageembelish', ':camera', ':album'

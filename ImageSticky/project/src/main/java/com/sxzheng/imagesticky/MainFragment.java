@@ -70,8 +70,8 @@ public class MainFragment extends BaseFragment {
     }
 
     private void goCamera() {
-        /*getFragmentManager().beginTransaction().add(android.R.id.content, new
-                CameraFragment());*/
+        getFragmentManager().beginTransaction().add(android.R.id.content, new
+                CameraFragment()).commit();
     }
 
     private void goAlbum() {

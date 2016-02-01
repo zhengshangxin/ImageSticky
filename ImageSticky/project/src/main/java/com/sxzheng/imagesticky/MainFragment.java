@@ -75,10 +75,8 @@ public class MainFragment extends BaseFragment {
     }
 
     private void goAlbum() {
-        //System album.
-        Intent photoPickerIntent = new Intent(Intent.ACTION_PICK);
-        photoPickerIntent.setType("image/*");
-        startActivityForResult(photoPickerIntent, 100);
+        getFragmentManager().beginTransaction().add(android.R.id.content,
+                new AlbumFragment()).commit();
     }
 
     private void goImgFilter() {

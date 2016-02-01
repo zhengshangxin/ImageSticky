@@ -10,14 +10,14 @@ public class Album implements Serializable {
 
     private static final long serialVersionUID = 5702699517846159671L;
 
-    private String albumUri;
-    private String title;
-    private ArrayList<PicItem> photos;
+    private String mAlbumUri;
+    private String mTitle;
+    private ArrayList<PicItem> mPicItems;
 
-    public Album(String title, String uri, ArrayList<PicItem> photos) {
-        this.title = title;
-        this.albumUri = uri;
-        this.photos = photos;
+    public Album(String title, String uri, ArrayList<PicItem> picItems) {
+        this.mTitle = title;
+        this.mAlbumUri = uri;
+        this.mPicItems = picItems;
     }
 
     @Override
@@ -26,7 +26,7 @@ public class Album implements Serializable {
 
         if (o != null && o instanceof Album) {
             String oAlbumUri = ((Album) o).getAlbumUri();
-            return albumUri.equals(oAlbumUri);
+            return mAlbumUri.equals(oAlbumUri);
         }
 
         return super.equals(o);
@@ -34,35 +34,35 @@ public class Album implements Serializable {
 
     @Override
     public int hashCode() {
-        if (albumUri == null) {
+        if (mAlbumUri == null) {
 
             return super.hashCode();
         } else {
-            return albumUri.hashCode();
+            return mAlbumUri.hashCode();
         }
     }
 
     public String getAlbumUri() {
-        return albumUri;
+        return mAlbumUri;
     }
 
     public void setAlbumUri(String albumUri) {
-        this.albumUri = albumUri;
+        this.mAlbumUri = albumUri;
     }
 
     public String getTitle() {
-        return title;
+        return mTitle;
     }
 
     public void setTitle(String title) {
-        this.title = title;
+        this.mTitle = title;
     }
 
-    public ArrayList<PicItem> getPhotos() {
-        return photos;
+    public ArrayList<PicItem> getPicItems() {
+        return mPicItems;
     }
 
-    public void setPhotos(ArrayList<PicItem> photos) {
-        this.photos = photos;
+    public void setPicItems(ArrayList<PicItem> picItems) {
+        this.mPicItems = picItems;
     }
 }

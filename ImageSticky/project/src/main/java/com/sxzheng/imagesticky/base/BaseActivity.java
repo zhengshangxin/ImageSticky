@@ -1,4 +1,4 @@
-package com.sxzheng.imagesticky;
+package com.sxzheng.imagesticky.base;
 
 import android.support.v4.app.FragmentActivity;
 

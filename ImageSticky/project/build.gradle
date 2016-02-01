@@ -26,4 +26,5 @@ dependencies {
     compile 'com.android.support:design:23.1.1'
     compile project(path: ':imagestickylib')
     compile project(path: ':camera')
+    compile project(path: ':album')
 }
